@@ -7,9 +7,11 @@ class DocumentsController < ApplicationController
     @document.save
     redirect_to @document
   end
-  
   def show
     @document = Document.find(params[:id])
+  end
+  def index
+    @documents = Document.all
   end
   private
 
