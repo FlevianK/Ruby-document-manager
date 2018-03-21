@@ -1,4 +1,5 @@
 class DocumentsController < ApplicationController
+  http_basic_authenticate_with name: "flevian", password: "kankan", except: [:index, :show]
   def index
     @documents = Document.all
   end
