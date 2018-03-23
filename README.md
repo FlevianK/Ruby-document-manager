@@ -4,9 +4,10 @@
 Things covered:
 
 * Ruby version
-  2.4.1p111
+  > 2.4.1p111
 
 * System dependencies
+  > Ruby on Rails
 
 * Configuration
 
