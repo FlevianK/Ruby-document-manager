@@ -7,7 +7,7 @@ Things covered:
   > 2.4.1p111
 
 * System dependencies
-  > Ruby on Rails
+  > Rails 5.1.5
 
 * Configuration
 
