@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  http_basic_authenticate_with name: "flevian", password: "kankan", only: :destroy
   def create
     @document = Document.find(params[:document_id])
     @review = @document.reviews.create(review_params)
