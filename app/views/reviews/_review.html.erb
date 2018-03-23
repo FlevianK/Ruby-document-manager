@@ -7,3 +7,9 @@
   <strong>Reviewer:</strong>
   <%= review.reviewer %>
 </p>  
+
+<p>
+  <%= link_to 'Delete', [review.document, review],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
