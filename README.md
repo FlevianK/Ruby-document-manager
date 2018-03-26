@@ -6,7 +6,7 @@ Anyone can post a review to any document depending on his/her document access se
 Things covered:
 
 * The application is currently hosted on Heroku:
-> [https://documentmanagementsystem.herokuapp.com/documents](Document management system)
+> [Document management system](https://documentmanagementsystem.herokuapp.com/)
 
 * Ruby version
 > 2.4.1p111
