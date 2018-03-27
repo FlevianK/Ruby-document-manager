@@ -1,21 +1,26 @@
-<h1>Listing documents</h1>
- 
-<%= link_to 'New document', new_document_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
-  <% @documents.each do |document| %>
+<div class="container">
+  <h3>All documents</h3>
+  
+  <%= link_to 'New document', new_document_path %>
+  <table class="responsive-table highlight">
     <tr>
-      <td><%= document.title %></td>
-      <td><%= document.text %></td>
-      <td><%= link_to 'Show', document_path(document) %></td>
-      <td><%= link_to 'Edit', edit_document_path(document) %></td>
-      <td><%= link_to 'Destroy', document_path(document),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Display</th>
+      <th>Update</th>
+      <th>Remove</th>
     </tr>
-  <% end %>
+  
+    <% @documents.each do |document| %>
+      <tr>
+        <td><%= document.title %></td>
+        <td><%= document.text %></td>
+        <td><%= link_to 'Show', document_path(document) %></td>
+        <td><%= link_to 'Edit', edit_document_path(document) %></td>
+        <td><%= link_to 'Destroy', document_path(document),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
 </table>
+</div>

@@ -1,18 +1,32 @@
-<p>
-  <strong>Title:</strong>
-  <%= @document.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @document.text %>
-</p>
-
-<h2>Reviews</h2>
-<%= render @document.reviews %>
-
-<h2>Add a review:</h2>
-<%= render 'reviews/form' %>
-
-<%= link_to 'Edit', edit_document_path(@document) %> |
-<%= link_to 'Back', documents_path %>
+<div class="container">
+  <div class="card-panel">
+  <h3>Document</h3>
+    <div class="blue-text text-darken-2">
+      <p>
+        <strong>Title:</strong>
+        <%= @document.title %>
+      </p>
+    </div>
+    <p>
+      <%= @document.text %>
+    </p>
+    <%= link_to 'Edit', edit_document_path(@document) %>|
+    <%= link_to 'Back', documents_path %>
+  </div>
+  <div class="card-panel">
+    <div>
+      <div class="blue-text text-darken-2">
+        <h5>Add a review:</h5>
+      </div>
+      <%= render 'reviews/form' %>
+    </div>
+    <% if @document.reviews.size > 0 %>
+      <div>
+        <div class="blue-text text-darken-2">
+          <h5>Reviews</h5>
+        </div>
+        <%= render @document.reviews %>
+      </div>
+    <% end %>
+  </div>
+</div>

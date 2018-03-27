@@ -8,6 +8,7 @@ class DocumentsController < ApplicationController
   end
   def show
     @document = Document.find(params[:id])
+    # byebug
   end
   def edit
     @document = Document.find(params[:id])
