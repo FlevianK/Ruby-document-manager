@@ -1,7 +1,7 @@
 <%= form_with model: @document, local: true do |login| %>
 
   <div class="row">
-    <div class="col s6 offset-m3 login">
+    <div class="col s8 offset-m2">
       <p>
         <%= login.label :username %><br>
         <%= login.text_field :username %>
@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col s6 offset-m3 login">
+    <div class="col s8 offset-m2">
       <p>
         <%= login.label :password %><br>
         <%= login.text_field :password %>

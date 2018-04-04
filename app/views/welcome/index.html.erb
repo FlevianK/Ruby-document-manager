@@ -3,12 +3,16 @@
     Welcome To Document Management System
   </header>
   <div>
-    <%= render 'login' %>
-  <div class="row">
-    <div class="col s7 offset-m5 signup">
-      <p>
-        <%= link_to 'Sign Up', controller: 'documents' %> to register!!!
-      </p>
+    <div class="login_template">
+      <%= render 'login' %>
+    </div>
+    <div class="signup_template">
+    <div class="row">
+      <div class="col s7 offset-m5 signup">
+        <p>
+          <%= link_to 'Sign Up', controller: 'documents' %> to register!!!
+        </p>
+      </div>
     </div>
   </div>
 </div>
