@@ -13,19 +13,28 @@
       </ul>
     </div>
   <% end %>
- 
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
- 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
- 
+  <div>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </p>
+  </div>
+  <div>
+    <p>
+      <%= form.label :text %><br>
+      <%= form.text_area :text %>
+    </p>
+  </div>
+  <div>
+    <span class="submit">
+      <p>
+        <%= form.submit %>
+      </p>
+    </span>
+    <span class="back">
+      <p>
+        <%= link_to 'Back', documents_path %>
+      </p>
+    </span>
+  </div>
 <% end %>

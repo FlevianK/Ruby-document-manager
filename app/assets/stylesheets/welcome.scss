@@ -2,13 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background-color: #73BA9B;
+  background-color: #D5F2E3;
   margin-top: 0;
-
   .container {
     border-radius: 5px;
     margin-top: 0;    
-    background-color: #D5F2E3;
+    background-color: #F5F7F2;;
     padding: 0 0 5% 0;
     header {
       border-radius: 5px 5px 0 0;
@@ -24,17 +23,28 @@ body {
       margin: 8% 18% 3% 18%;
       padding-top: 4%;
       padding-bottom: 5%;
-      background-color: #73BA9B;
+      background-color: #E6EBE1;
       border-radius: 5px;
-    }
-    .login_header{
-      text-align: center;
+      .login {
+        text-align: center;
+        .button {
+          color: #D5F2E3;
+          width: 80px;
+          height: 40px;
+          border-radius: 5px;
+          background-color: #003E1F;
+          border-top-color: #003E1F;
+          border-left-color: #003E1F;
+          -moz-border-bottom-colors: #D5F2E3;
+        }
+      }
     }
     .signup_template {
       padding-bottom: 12%;
+      text-align: center;
     }
     .row {
-      color: #73BA9B;
+      color: #003E1F;
       margin: 0 0 -3% 0;
       .signup a {
         color: #003E1F;
@@ -47,16 +57,9 @@ body {
       }
       input[type=text]:not(.browser-default) {
         height: 1.5rem;
-        color: #D5F2E3;
+        color: #003E1F;
         border-color: #003E1F;
       }
-    }
-    .button {
-      color: white;
-      width: 80px;
-      height: 40px;
-      border-radius: 5px;
-      background-color: green;
     }
   }
 }

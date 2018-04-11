@@ -1,26 +1,30 @@
 <div class="container">
-  <h3>All documents</h3>
-  
-  <%= link_to 'New document', new_document_path %>
-  <table class="responsive-table highlight">
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th>Display</th>
-      <th>Update</th>
-      <th>Remove</th>
-    </tr>
-  
-    <% @documents.each do |document| %>
+  <header>
+  All documents
+  </header>
+  <div class="new_document_template">
+    <%= link_to 'New document', new_document_path %>
+  </div>
+  <div>
+    <table class="highlight">
       <tr>
-        <td><%= document.title %></td>
-        <td><%= document.text %></td>
-        <td><%= link_to 'Show', document_path(document) %></td>
-        <td><%= link_to 'Edit', edit_document_path(document) %></td>
-        <td><%= link_to 'Destroy', document_path(document),
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th>Reviews</th>
+        <th>Display</th>
+        <th>Update</th>
+        <th>Remove</th>
       </tr>
-    <% end %>
-</table>
+        <% @documents.each do |document| %>
+          <tr>
+            <td><%= document.title %></td>
+            <td><%= document.reviews.size %></td>
+            <td><%= link_to 'Show', document_path(document) %></td>
+            <td><%= link_to 'Edit', edit_document_path(document) %></td>
+            <td><%= link_to 'Destroy', document_path(document),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+    </table>
+  </div>
 </div>
